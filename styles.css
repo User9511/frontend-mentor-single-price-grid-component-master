@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:root {
+  --Body-Background: hsla(71, 73%, 54%, 0.697);
+  --Cyan: hsl(179, 62%, 43%);
+  --Lighter-Cyan: rgba(75, 190, 188, 0.69);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Dark-Gray: hsl(200, 3%, 23%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --Lighter-Gray: #97e0e2;
+}
+
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(
+    120deg,
+    hsla(252, 73%, 54%, 0.5),
+    hsl(57, 100%, 50%, 0.2)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Outer Container */
+.outer-container {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Syles */
+.title {
+  font-size: 1.5rem;
+  color: var(--Cyan);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--Bright-Yellow);
+}
+
+h3 {
+  color: var(--Light-Gray);
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 2;
+  color: var(--Light-Gray);
+  width: clamp(30%, 90%, 95%);
+}
+
+.list {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--Light-Gray);
+  width: clamp(30%, 90%, 95%);
+}
+
+/* Button */
+#btn-text {
+  color: var(--Dark-Gray);
+
+} 
+
+.btn {
+  background-color: var(--Bright-Yellow);
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twitter-icon {
+  width: 1.5rem;
+  fill: var(--Dark-Gray);
+  margin-right: 10px;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a a"
+    "b c";
+  max-width: 45rem;
+}
+
+.card-container > * {
+  padding: 3rem;
+}
+
+/* Join Our Community */
+.join-our-community {
+  grid-area: a;
+  gap: 1.5rem;
+  background-color: #fff;
+  display: grid;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.join-our-community p {
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+}
+
+/* Monthly Subscription */
+.monthly-subscription {
+  grid-area: b;
+  background-color: var(--Cyan);
+  display: grid;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--Light-Gray);
+}
+
+span {
+  font-size: 1rem;
+  color: var(--Lighter-Gray);
+}
+
+/* Why Us */
+.why-us {
+  grid-area: c;
+  background-color: var(--Lighter-Cyan);
+  display: grid;
+  border-radius: 0px 0px 10px 0px;
+}
+
+/* Mobile View */
+@media (max-width: 500px) {
+  /* Outer Container */
+  .outer-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    color: var(--Cyan);
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--Bright-Yellow);
+  }
+
+  h3 {
+    color: var(--Light-Gray);
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--Light-Gray);
+    width: 100%;
+  }
+
+ /* Button */
+  .btn {
+    background-color: var(--Bright-Yellow);
+    padding: 1rem;
+    width: 100%;
+    color: var(--Dark-Gray);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .twitter-icon {
+    width: 1.5rem;
+    fill: var(--Dark-Gray);
+  }
+
+  /* Card Container */
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    margin: 5rem 2rem;
+  }
+
+  .card-container > * {
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  /* Join Our Community */
+  .join-our-community {
+    grid-area: a;
+    background-color: #fff;
+    display: grid;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .join-our-community p {
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+  }
+
+  /* Monthly Subscription */
+  .monthly-subscription {
+    grid-area: b;
+    background-color: var(--Cyan);
+    display: grid;
+    border-radius: 0;
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--Light-Gray);
+  }
+
+  span {
+    font-size: 1rem;
+  }
+
+ /* Why Us */
+  .why-us {
+    grid-area: c;
+    background-color: var(--Lighter-Cyan);
+    display: grid;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 5rem;
+  }
+}
