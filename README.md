@@ -1,7 +1,7 @@
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/single-price-grid-component-html-css-js-text-change-o9JH20aUYx]
-- Live Site URL: [https://smgy94.github.io/frontend-mentor-single-price-grid-component-master/]
+- Live Site URL: [https://user9511.github.io/frontend-mentor-single-price-grid-component-master/]
 
 # Frontend Mentor - Single price grid component solution
 
